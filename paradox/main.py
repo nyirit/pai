@@ -83,6 +83,7 @@ async def run_loop():
                 await alarm.loop()
             else:
                 logger.error("Unable to connect to alarm")
+                break
 
             if alarm:
                 await asyncio.sleep(retry_time_wait)
